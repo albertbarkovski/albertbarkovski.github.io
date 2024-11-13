@@ -1,0 +1,25 @@
+@import "variables";
+
+.container-item {
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+
+  h1 {
+    background-color: $primary-color;
+    color: $white;
+    border-radius: 40px;
+    // padding: 0 50px;
+    justify-content: center;
+    align-items: center;
+    // align-content: center;
+  }
+  .container-img {
+    width: 100%;
+    border-radius: 40px;
+    height: 280px;
+    margin-bottom: 16px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}
