@@ -1,0 +1,62 @@
+@import 'variables';
+
+body{
+#header-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-item{
+       
+        .logo{
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        border-radius: 50px;
+        cursor: pointer;
+        }
+        .nav-list{
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            text-align: center;
+            gap: 20px;
+            padding: 0;
+            margin: 0px;
+            font-size: 20px;
+            
+            .nav-item{
+                
+                a{
+                text-decoration: none;
+                color: $primary-color;
+                }
+                
+            }
+        }
+        .btn-group{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;        
+            border-radius: 5px;
+            background-color: unset;
+            color: $white;
+            margin: 10px;
+
+            .btn-log, .btn-reg{
+                border: none;
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                background-color: $primary-color;
+                color: $white;
+                
+            }
+    
+        }
+
+    }
+
+    }
+}
