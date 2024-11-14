@@ -1,25 +1,32 @@
 @import "variables";
+@import "mixins";
 
 .container-item {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  align-content: center;
+  width: 100%;
+  // margin: 20px;
+
+  @include tablet-and-above {
+    flex-direction: row;
+  }
 
   h1 {
-    background-color: $primary-color;
-    color: $white;
-    border-radius: 40px;
-    // padding: 0 50px;
+    width: 90%;
+    color: $primary-color;
     justify-content: center;
-    align-items: center;
-    // align-content: center;
+    text-align: center;
   }
   .container-img {
-    width: 100%;
+    width: 90%;
     border-radius: 40px;
     height: 280px;
-    margin-bottom: 16px;
     -o-object-fit: cover;
     object-fit: cover;
+    justify-content: center;
+    align-items: center;
   }
 }
+

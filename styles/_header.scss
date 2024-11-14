@@ -1,11 +1,16 @@
 @import "variables";
+@import "mixins";
 
-body {
   #header-section {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    // justify-content: space-between;
     align-items: center;
+
+    @include tablet-and-above {
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
     .header-item {
       .logo {
@@ -35,12 +40,16 @@ body {
       }
       .btn-group {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
         border-radius: 5px;
         background-color: unset;
         color: $white;
         margin: 10px;
+
+        @include tablet-and-above {
+          flex-direction: column;
+        }
 
         .btn-log,
         .btn-reg {
@@ -55,4 +64,3 @@ body {
       }
     }
   }
-}

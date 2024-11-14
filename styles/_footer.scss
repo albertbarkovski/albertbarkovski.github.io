@@ -1,0 +1,12 @@
+@import "variables";
+@import "mixins";
+
+#footer {
+  display: flex;
+  background-color: $primary-color;
+  color: $white;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
