@@ -45,9 +45,9 @@
         flex-direction: column;
 
         @include tablet-and-above {
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          
         }
 
         .service {
@@ -121,4 +121,10 @@
       }
     }
   }
+}
+
+.service:hover{
+  background-color: $primary-color;
+  color: $white;
+  transition: all 0.2s ease;
 }

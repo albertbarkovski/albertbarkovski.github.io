@@ -155,9 +155,8 @@
 }
 @media (min-width: 768px) {
   .tab.active#services .services-container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 768px) {
@@ -231,6 +230,12 @@
   .tab.active#contact .contact-email {
     font-size: 25px;
   }
+}
+
+.service:hover {
+  background-color: #1a1a3a;
+  color: #ead3d3;
+  transition: all 0.2s ease;
 }
 
 #footer {
