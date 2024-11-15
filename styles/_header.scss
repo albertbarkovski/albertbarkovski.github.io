@@ -1,66 +1,93 @@
 @import "variables";
 @import "mixins";
 
-  #header-section {
-    display: flex;
-    flex-direction: column;
-    // justify-content: space-between;
-    align-items: center;
+#header-section {
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  align-items: center;
 
-    @include tablet-and-above {
-      flex-direction: row;
-      justify-content: space-between;
+  @include tablet-and-above {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .header-item {
+    .logo {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      border-radius: 50px;
+      box-shadow: 0px 0px 10px 0px $primary-color;
     }
+    .nav-container {
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+      gap: 30px;
 
-    .header-item {
-      .logo {
-        width: 100px;
-        height: 100px;
-        margin: 10px;
-        border-radius: 50px;
-        cursor: pointer;
-      }
-      .nav-list {
-        display: flex;
-        flex-direction: row;
-        list-style-type: none;
-        gap: 50px;
-        padding: 0;
-        margin: 0px;
-        font-size: 20px;
-
-        .nav-item {
-          flex: 1;
-          text-align: center;
-          a {
-            text-decoration: none;
-            color: $primary-color;
-          }
-        }
-      }
-      .btn-group {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
+      button {
+        border: none;
+        padding: 10px;
         border-radius: 5px;
-        background-color: unset;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        background-color: $white;
+        color: $primary-color;
+      }
+
+      button:hover {
+        background-color: $primary-color;
         color: $white;
-        margin: 10px;
+        transition: all 0.2s ease;
+      }
 
-        @include tablet-and-above {
-          flex-direction: column;
-        }
+      .nav-link {
+        flex: 1;
+        text-align: center;
 
-        .btn-log,
-        .btn-reg {
-          border: none;
-          padding: 10px;
-          border-radius: 5px;
-          font-weight: 600;
-          cursor: pointer;
-          background-color: $primary-color;
-          color: $white;
+        &.active {
+          border: 3px solid $primary-color;
+          font-size: 22px;
         }
+      }
+    }
+    .btn-group {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      height: 60px;
+      width: 250px;
+      border-radius: 5px;
+      background-color: unset;
+      color: $white;
+      margin: 10px;
+      justify-content: space-around;
+      align-items: center;
+
+      @include tablet-and-above {
+        flex-direction: column;
+      }
+
+      .btn-log,
+      .btn-reg {
+        border: none;
+        padding: 10px;
+        height: 40px;
+        width: 120px;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+        background-color: $primary-color;
+        color: $white;
+      }
+      .btn-log:hover,
+      .btn-reg:hover {
+        font-size: 14px;
+        transition: all 0.05s ease;
       }
     }
   }
+}

@@ -18,16 +18,10 @@
         <img class="logo" src="media/logo.png" alt="logo" />
       </div>
       <div class="header-item">
-        <nav>
-          <ul class="nav-list">
-            <li class="nav-item"><a href="about" class="nav-link">About</a></li>
-            <li class="nav-item">
-              <a href="services" class="nav-link">Services</a>
-            </li>
-            <li class="nav-item">
-              <a href="contact" class="nav-link">Contact</a>
-            </li>
-          </ul>
+        <nav class="nav-container">
+          <button class="nav-link active" data-id="about">About</button>
+          <button class="nav-link" data-id="services">Services</button>
+          <button class="nav-link" data-id="contact">Contact</button>
         </nav>
       </div>
       <div class="header-item">
@@ -48,7 +42,7 @@
           <img class="container-img" src="media/main.avif" alt="page image" />
         </div>
       </container>
-      <section id="about">
+      <section class="tab active" id="about">
         <h2 class="section-name">About Us</h2>
         <p class="about-us">
           Welcome to Barbershop, where style meets skill. We’re more than just a
@@ -64,7 +58,7 @@
         </p>
       </section>
 
-      <section id="services">
+      <section class="tab" id="services">
         <h2 class="section-name">Our Services</h2>
         <div class="services-container">
           <div class="service">
@@ -107,7 +101,7 @@
           </div>
         </div>
       </section>
-      <section id="contact">
+      <section class="tab" id="contact">
         <h2 class="section-name">Contact Us</h2>
         <div class="contact-container">
           <div class="contact-info">
